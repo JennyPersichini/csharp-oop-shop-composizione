@@ -8,5 +8,6 @@ namespace csharp_oop_shop_composizione
 {
     public class Categoria
     {
+        
     }
 }
