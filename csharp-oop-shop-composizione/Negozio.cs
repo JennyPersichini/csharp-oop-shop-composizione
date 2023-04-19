@@ -16,7 +16,7 @@ namespace csharp_oop_shop_composizione
 
         private List<Prodotto> prodotti;
 
-        public void Shop(string nome, string citta, string indirizzo, int numeroCivico)
+        public Negozio(string nome, string citta, string indirizzo, int numeroCivico )
         {
             this.nome = nome;
             this.citta = citta;
@@ -96,6 +96,14 @@ namespace csharp_oop_shop_composizione
             rapprStringa += "Indirizzo: " + this.indirizzo + "\n";
             rapprStringa += "Numero Civico: " + this.numeroCivico + "\n";
             rapprStringa += "Prodotti: \n";
+
+            foreach (Prodotto scanProdotto in prodotti)
+            {
+                rapprStringa += " - " + scanProdotto.GetProdottoStringa() + "\n";
+            }
+
+            rapprStringa += "\n";
+
 
             return rapprStringa;
         }
