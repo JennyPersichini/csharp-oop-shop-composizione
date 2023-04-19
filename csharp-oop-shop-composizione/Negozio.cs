@@ -70,5 +70,35 @@ namespace csharp_oop_shop_composizione
             this.numeroCivico = numeroCivico;
         }
 
+        //si possa inserire la lista di prodotti inziali o eventualmente una lista di prodotti nuovi che tratterò in più da oggi in poi nel negozio.
+ 
+        public void aggiungiListaProdotti(List<Prodotto> ProdottiDaAggiungere)
+        {
+            foreach (Prodotto ProdottoDaAggiungere in ProdottiDaAggiungere)
+            {
+                this.prodotti.Add(ProdottoDaAggiungere);
+            }
+        }
+        
+        //si possa inserire anche un prodotto singolo in più al negozio
+        
+        public void aggiungiProdotto(Prodotto nuovoProdotto)
+        {
+            prodotti.Add(nuovoProdotto);
+        }
+
+        //si possa chiedere ad uno shop di darmi la sua rappresentazione in stringa e io possa stamparla in Console.
+
+        public string RappStringa()
+        {
+            string rapprStringa = "Nome: " + this.nome + "\n";
+            rapprStringa += "Città: " + this.citta + "\n";
+            rapprStringa += "Indirizzo: " + this.indirizzo + "\n";
+            rapprStringa += "Numero Civico: " + this.numeroCivico + "\n";
+            rapprStringa += "Prodotti: \n";
+
+            return rapprStringa;
+        }
     }
+
 }
