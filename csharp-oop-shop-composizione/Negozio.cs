@@ -10,16 +10,16 @@ namespace csharp_oop_shop_composizione
     {
         //Lo shop deve avere un nome, una citta, un indirizzo, un numero civico
         private string nome;
-        private string città;
+        private string citta;
         private string indirizzo;
         private int numeroCivico;
 
         private List<Prodotto> prodotti;
 
-        public void Shop(string nome, string città, string indirizzo, int numeroCivico)
+        public void Shop(string nome, string citta, string indirizzo, int numeroCivico)
         {
             this.nome = nome;
-            this.città = città;
+            this.citta = citta;
             this.indirizzo = indirizzo;
             this.numeroCivico = numeroCivico;
 
@@ -33,9 +33,9 @@ namespace csharp_oop_shop_composizione
             return this.nome;
         }
 
-        public string GetCittà()
+        public string GetCitta()
         {
-            return this.città;
+            return this.citta;
         }
 
         public string GetIndirizzo()
@@ -54,6 +54,21 @@ namespace csharp_oop_shop_composizione
         }
 
         //si possa modificare alcune delle informazioni dello shop
+
+        public void CambiaCitta(string citta)
+        {
+            this.citta = citta;
+        }
+
+        public void CambiaIndirizzo(string indirizzo)
+        {
+            this.indirizzo = indirizzo;
+        }
+
+        public void CambiaNumeroCivico(int numeroCivico)
+        {
+            this.numeroCivico = numeroCivico;
+        }
 
     }
 }
