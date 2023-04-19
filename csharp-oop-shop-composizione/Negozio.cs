@@ -99,6 +99,7 @@ namespace csharp_oop_shop_composizione
 
             return rapprStringa;
         }
+
     }
 
 }
